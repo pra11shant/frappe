@@ -8,6 +8,7 @@ import random
 import re
 import string
 import traceback
+import types
 from collections.abc import Iterable, Sequence
 from contextlib import contextmanager, suppress
 from time import time
