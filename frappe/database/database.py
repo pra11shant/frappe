@@ -546,7 +546,10 @@ class Database:
 			return None
 
 		row = result[0]
-
+		
+		if isinstance(row, (dict, frappe._dict, types.SimpleNamespace)):
+			return row
+		
 		if len(row) > 1 or as_dict:
 			return row
 		# single field is requested, send it without wrapping in containers
